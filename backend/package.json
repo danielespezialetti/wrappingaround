@@ -1,0 +1,25 @@
+{
+  "name": "koaproject",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@koa/ejs": "^5.1.0",
+    "@koa/router": "^13.1.0",
+    "dotenv": "^16.4.7",
+    "koa-bodyparser": "^4.4.1",
+    "koa-json": "^2.0.2",
+    "koa-session": "^7.0.2",
+    "koa-static": "^5.0.0",
+    "nodemon": "^3.1.9",
+    "piscina": "^5.0.0-alpha.0"
+  },
+  "type": "module"
+}

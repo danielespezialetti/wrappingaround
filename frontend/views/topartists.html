@@ -1,0 +1,34 @@
+<div class="jumbotron">
+  <div class="container text-center mt-5">
+    <h1 class="display-4">Ecco gli artisti più ascoltati da te!</h1>
+    <p class="lead text-success">Wow!</p>
+  </div>
+</div>
+<hr class="my-4">
+<div class="container mb-5 bg-light">
+  <div class="btn-group mb-4 d-flex justify-content-center" role="toolbar">
+    <a role="button" class="btn bg-light btn-outline-success" href="/topartists/short_term">Ultime 4 settimane</a>
+    <a role="button" class="btn bg-light btn-outline-success" href="/topartists/medium_term">Ultimi 6 mesi</a>
+    <a role="button" class="btn bg-light btn-outline-success" href="/topartists/long_term">Ultimo anno</a>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <% items.forEach((element, index)=> { %>
+        <div class="col-4 mb-4">
+          <figure>
+            <div class="ratio ratio-1x1">
+              <img src="<%=element.images[1].url%>" style="object-fit: cover;" alt="Immagine di <%=element.name%>"
+                class="img-fluid">
+            </div>
+            <figcaption class="text-center"><strong><a class="text-dark"
+                  href="https://spotify/artist/<%= element.id %>">
+                  <%= index + 1 %>. <%= element.name %>
+                </a></strong></figcaption>
+          </figure>
+        </div>
+        <% }); %>
+    </div>
+  </div>
+  <div style="height: 10px;"></div>
+</div>
